@@ -13,4 +13,4 @@ def get_task(new_pass):
     return "Pass changed!"
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
