@@ -1,5 +1,5 @@
 import Adafruit_BBIO.GPIO as GPIO
-from time import time
+import time
 
 password = [1,0,1,1]
 
