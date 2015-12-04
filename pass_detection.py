@@ -41,9 +41,9 @@ def main():
 
 def buzz():
     for i in range(1,1000):
-        time.sleep(.1)
+        time.sleep(.01)
         GPIO.output("P8_16", GPIO.HIGH)
-        time.sleep(.1)
+        time.sleep(.01)
         GPIO.output("P8_16", GPIO.LOW)
 
 def update_password():
