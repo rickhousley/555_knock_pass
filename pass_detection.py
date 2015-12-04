@@ -40,11 +40,11 @@ def main():
             del entered_password[:]
 
 def buzz():
-    for i in range(1,1000):
-        time.sleep(.001)
+    for i in range(1,1000):        
         GPIO.output("P8_16", GPIO.HIGH)
         time.sleep(.001)
         GPIO.output("P8_16", GPIO.LOW)
+        time.sleep(.001)
 
 def update_password():
     file = open('secret.pass', 'r')
