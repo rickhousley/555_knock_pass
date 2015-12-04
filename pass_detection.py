@@ -9,6 +9,7 @@ knock_speed = 0.25
 def main():
     # Setup GPIO as input for digital mic
     GPIO.setup("P8_14", GPIO.IN)
+    GPIO.setup("P8_16", GPIO.OUT)
 
     password = update_password()
     print password
@@ -30,12 +31,20 @@ def main():
                 print "Password Correct!"
 
                 # It should unlock here
+                buzz()
 
                 # Check for password update
                 password = update_password()
 
 
             del entered_password[:]
+
+def buzz():
+    for i in range(1,1000):
+        time.sleep(.1)
+        GPIO.output("P8_16", GPIO.HIGH)
+        time.sleep(.1)
+        GPIO.output("P8_16", GPIO.LOW)
 
 def update_password():
     file = open('secret.pass', 'r')
