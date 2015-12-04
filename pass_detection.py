@@ -27,7 +27,7 @@ def main():
         else:
             print "nope, ignoring"
 
-        entered_password.clear()
+        del entered_password[:]
 
 def poll_for_knock(timeout):
     death_time = time.time() + timeout
