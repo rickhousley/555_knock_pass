@@ -10,7 +10,7 @@ def main():
         # read digital
         if not GPIO.input("P8_14"):
             print "Knock!"
-            time.sleep(50)
+            time.sleep(.01)
 
 if __name__ == "__main__":
     main()
