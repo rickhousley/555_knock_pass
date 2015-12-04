@@ -40,7 +40,7 @@ def main():
 
 def update_password():
     file = open('secret.pass', 'r')
-    password = list(file.read().split(' '))
+    password = map(int, list(file.read().split()))
 
 def poll_for_knock(timeout):
     death_time = time.time() + timeout
