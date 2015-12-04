@@ -18,6 +18,9 @@ def main():
         # Fill password
         for i in range(0,4):
             entered_password.append(poll_for_knock(1))
+            time.sleep(0.1) # Wait for bounces
+
+    print entered_password
 
     # Compare password to set password
     if entered_password == password:
