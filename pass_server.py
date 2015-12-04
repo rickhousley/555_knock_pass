@@ -7,7 +7,7 @@ app = Flask(__name__)
 def get_task(new_pass):
     file = open('secret.pass', 'w')
     for i in range(0,len(new_pass)):
-        file.write(new_pass[0])
+        file.write(new_pass[i])
         file.write(' ')
     file.close()
     return "Pass changed!"
