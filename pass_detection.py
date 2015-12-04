@@ -20,13 +20,13 @@ def main():
             entered_password.append(poll_for_knock(1))
             time.sleep(0.1) # Wait for bounces
 
-    print entered_password
+        print entered_password
 
-    # Compare password to set password
-    if entered_password == password:
-        print "Password Correct!"
-    else:
-        print "nope, ignoring"
+        # Compare password to set password
+        if entered_password == password:
+            print "Password Correct!"
+        else:
+            print "nope, ignoring"
 
 def poll_for_knock(timeout):
     death_time = time.time() + timeout
