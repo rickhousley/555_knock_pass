@@ -16,10 +16,10 @@ def main():
 
 
 def poll_for_knock(timeout):
-    c_time = time.now()
-    death_time = time.now() + timeout
+    c_time = time.time()
+    death_time = time.time() + timeout
 
-    if (time.now() > death_time):
+    if (time.time() > death_time):
         if not GPIO.input("P8_14"):
             return True
     return False
