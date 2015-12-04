@@ -28,6 +28,8 @@ def main():
         else:
             print "nope, ignoring"
 
+        entered_password = []
+
 def poll_for_knock(timeout):
     death_time = time.time() + timeout
     while (time.time() < death_time):
