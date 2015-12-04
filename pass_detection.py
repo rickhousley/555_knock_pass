@@ -20,7 +20,7 @@ def main():
             time.sleep(knock_speed) # Wait for bounces
 
             # Fill password
-            for i in range(0,len(entered_password.length)):
+            for i in range(0,len(entered_password)):
                 entered_password.append(poll_for_knock(knock_speed))
                 time.sleep(0.1) # Wait for bounces
 
