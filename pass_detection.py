@@ -4,7 +4,7 @@ import time
 password = []
 entered_password = []
 
-knock_speed = 0.5
+knock_speed = 0.25
 
 def main():
     # Setup GPIO as input for digital mic
@@ -17,7 +17,7 @@ def main():
     while True:
         if not GPIO.input("P8_14"):
             print "Starting Password Check"
-            time.sleep(knock_speed) # Wait for bounces
+            time.sleep(0.1) # Wait for bounces
 
             # Fill password
             for i in range(0,len(password)):
