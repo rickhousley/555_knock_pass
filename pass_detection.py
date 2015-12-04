@@ -10,7 +10,7 @@ def main():
     # Setup GPIO as input for digital mic
     GPIO.setup("P8_14", GPIO.IN)
 
-    update_password()
+    password = update_password()
     print password
 
     # Wait for knock to start password
@@ -33,16 +33,15 @@ def main():
                 # It should unlock here
 
                 # Check for password update
-                update_password()
+                password = update_password()
 
 
             del entered_password[:]
 
 def update_password():
     file = open('secret.pass', 'r')
-    password = map(int, list(file.read().split()))
-    print password
-    file.close()
+    passw = map(int, list(file.read().split()))
+    return passw
 
 def poll_for_knock(timeout):
     death_time = time.time() + timeout
