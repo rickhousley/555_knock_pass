@@ -4,7 +4,7 @@ import time
 password = []
 entered_password = []
 
-knock_speed = 1
+knock_speed = 0.25
 
 def main():
     # Setup GPIO as input for digital mic
