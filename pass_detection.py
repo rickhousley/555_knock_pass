@@ -2,9 +2,11 @@ import Adafruit_BBIO.GPIO as GPIO
 import time
 
 password = [1,0,1,1]
+entered_password = []
+
 
 def main():
-    # Setup GPIO as input
+    # Setup GPIO as input for digital mic
     GPIO.setup("P8_14", GPIO.IN)
 
     # Wait for knock to start password
@@ -12,9 +14,16 @@ def main():
         if not GPIO.input("P8_14"):
             print "Starting Password Check"
             time.sleep(0.1) # Wait for bounces
-            if poll_for_knock(10):
-                print "1"
 
+        # Fill password
+        for i in range(0,4):
+            entered_password.append(poll_for_knock)
+
+    # Compare password to set password
+    if entered_password == password:
+        print "Password Correct!"
+    else:
+        print "nope, ignoring"
 
 def poll_for_knock(timeout):
     death_time = time.time() + timeout
