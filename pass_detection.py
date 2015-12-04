@@ -1,4 +1,5 @@
 import Adafruit_BBIO.GPIO as GPIO
+import time
 
 password = [1,0,1,0]
 
@@ -8,7 +9,8 @@ def main():
     while True:
         # read digital
         if not GPIO.input("P8_14"):
-            print "Knock!"    
+            print "Knock!"
+            time.sleep(50)
 
 if __name__ == "__main__":
     main()
