@@ -17,7 +17,7 @@ def main():
 
         # Fill password
         for i in range(0,4):
-            entered_password.append(poll_for_knock)
+            entered_password.append(poll_for_knock(1))
 
     # Compare password to set password
     if entered_password == password:
