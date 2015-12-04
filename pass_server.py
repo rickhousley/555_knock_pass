@@ -11,3 +11,6 @@ def get_task(new_pass):
         file.write(' ')
     file.close()
     return "Pass changed!"
+
+if __name__ == '__main__':
+    app.run()
