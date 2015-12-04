@@ -4,7 +4,6 @@ import time
 password = [1,0,1,1]
 entered_password = []
 
-
 def main():
     # Setup GPIO as input for digital mic
     GPIO.setup("P8_14", GPIO.IN)
@@ -28,7 +27,7 @@ def main():
         else:
             print "nope, ignoring"
 
-        entered_password = []
+        entered_password.clear()
 
 def poll_for_knock(timeout):
     death_time = time.time() + timeout
